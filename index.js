@@ -31,7 +31,7 @@ if (process.env.SERVER_ENV === "development") {
     sameSite: "lax",
   };
 }
-/* PROVIDED CODE
+
 if (process.env.SERVER_ENV !== "development") {
   sessionOptions.proxy = true;
   sessionOptions.cookie = {
@@ -40,7 +40,6 @@ if (process.env.SERVER_ENV !== "development") {
     domain: process.env.SERVER_URL,
   };
 }
-*/
 
 app.use(session(sessionOptions));
 app.use(express.json());
