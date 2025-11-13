@@ -25,14 +25,14 @@ const sessionOptions = {
 
 
 if (process.env.SERVER_ENV === "development") {
+  console.log("Server in " + process.env.SERVER_ENV + " environment");
   sessionOptions.cookie = {
     secure: false,
     httpOnly: true,
     sameSite: "lax",
   };
-}
-
-if (process.env.SERVER_ENV !== "development") {
+} else {
+  console.log("Server in " + process.env.SERVER_ENV + " environment");
   sessionOptions.proxy = true;
   sessionOptions.cookie = {
     sameSite: "none",
