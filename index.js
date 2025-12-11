@@ -6,6 +6,8 @@ import UserRoutes from "./Kambaz/Users/routes.js";
 import CourseRoutes from "./Kambaz/Courses/routes.js";
 import ModuleRoutes from "./Kambaz/Modules/routes.js";
 import AssignmentRoutes from "./Kambaz/Assignments/routes.js";
+import QuizzesRoutes from "./Kambaz/Quizzes/routes.js";
+import QuestionsRoutes from "./Kambaz/Questions/routes.js";
 import session from "express-session";
 import mongoose from "mongoose";
 
@@ -50,6 +52,8 @@ UserRoutes(app);
 CourseRoutes(app);
 ModuleRoutes(app);
 AssignmentRoutes(app);
+QuizzesRoutes(app);
+QuestionsRoutes(app);
 Lab5(app);
 
 app.listen(4000);
